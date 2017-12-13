@@ -31,10 +31,6 @@ int main()
 	cout << "\n";
 	Sleep(100);
 
-
-
-
-
 	while (1)
 	{
 		if (GetAsyncKeyState(VK_F1))
@@ -49,18 +45,10 @@ int main()
 
 		cout << "\r";
 		cout << " Kifferking Quotes Send = ";
-		cout << Quotes.Erhöhung;
+		cout << Quotes.ErhÃ¶hung;
 		cout << "  Karl Marx Quotes Send = ";
-		cout << Quotes.Erhöhung2;
-
-
-
-
-
-
-
-
-
+		cout << Quotes.ErhÃ¶hung2;
+		
 		Sleep(250);
 	}
 }		
