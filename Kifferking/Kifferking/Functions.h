@@ -100,3 +100,60 @@ void ToClipboard(const std::string &s)
 	CloseClipboard();
 	GlobalFree(hg);
 }
+
+void AfkScript()
+{
+	INPUT ip;
+
+	ip.type = INPUT_KEYBOARD;
+	ip.ki.time = 0;
+	ip.ki.wVk = 0;
+	ip.ki.dwExtraInfo = 0;
+
+
+	ip.ki.dwFlags = KEYEVENTF_SCANCODE;
+	ip.ki.wScan = 0x1E;                
+
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+	ip.ki.wVk = 'A';
+	ip.ki.dwFlags = 0;
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+	ip.ki.wVk = 'A';
+	ip.ki.dwFlags = KEYEVENTF_KEYUP;
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+	ip.type = INPUT_KEYBOARD;
+	ip.ki.time = 0;
+	ip.ki.wVk = 0;
+	ip.ki.dwExtraInfo = 0;
+
+
+	ip.ki.dwFlags = KEYEVENTF_SCANCODE;
+	ip.ki.wScan = 0x20;
+
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+	ip.ki.wVk = 'D';
+	ip.ki.dwFlags = 0;
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+	ip.ki.wVk = 'D';
+	ip.ki.dwFlags = KEYEVENTF_KEYUP;
+	SendInput(1, &ip, sizeof(INPUT));
+
+	Sleep(25);
+
+
+}
