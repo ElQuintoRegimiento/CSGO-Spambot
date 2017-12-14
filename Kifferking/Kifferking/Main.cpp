@@ -10,6 +10,7 @@ int main()
 {
 	int RandomNumber;
 
+	cout << "\n";
 	system("Color 5");
 	cout << " Counter Strike: Global Offensive Spambot";
 	Sleep(100);
@@ -20,16 +21,22 @@ int main()
 	cout << "\n";
 	Sleep(100);
 	cout << " Kifferking           F1";
+	Sleep(100);
 	cout << "\n";
 	Sleep(100);
 	cout << " Karl Marx            F2";
 	Sleep(100);
 	cout << "\n";
 	Sleep(100);
+	cout << " Afk-Script           F11";
+	Sleep(100);
+	cout << "\n";
+	Sleep(100);
 	cout << "\n";
 	Sleep(100);
 	cout << "\n";
 	Sleep(100);
+
 
 	while (1)
 	{
@@ -43,12 +50,17 @@ int main()
 			Quotes.KarlMarx(0);
 		}
 
+		if (GetKeyState(VK_F11))
+		{
+			AfkScript();
+		}
+
 		cout << "\r";
 		cout << " Kifferking Quotes Send = ";
 		cout << Quotes.Erhöhung;
 		cout << "  Karl Marx Quotes Send = ";
 		cout << Quotes.Erhöhung2;
-		
+
 		Sleep(250);
 	}
 }		
